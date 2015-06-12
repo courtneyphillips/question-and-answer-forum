@@ -1,18 +1,33 @@
-<h2>{{title}}</h2>
+<h1>{{title}}</h1>
 
-<p>{{body}}</p>
+{{#if isEditing}}
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input value=title id="title" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      {{textarea value=body id="body" class="form-control" rows="15"}}
+    </div>
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+
+{{else}}
+  <p>{{body}}</p>
+  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+
+{{/if}}
 
 {{outlet}}
-
 
 <h2>Answers</h2>
 
 {{#each answer in answers}}
-
-<p>
-  {{answer.text}}
-  <!-- <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button> -->
-</p>
+  <p>
+    {{answer.text}}
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+  </p>
 {{/each}}
 
-<p>{{#link-to 'new-answer' this class="btn btn-success"}}New answer{{/link-to}}</p>
+<p>{{#link-to 'new-answer' this class="btn btn-success btn-block"}}New answer{{/link-to}}</p>

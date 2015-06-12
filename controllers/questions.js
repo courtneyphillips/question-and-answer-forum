@@ -8,9 +8,10 @@ Forum.QuestionsController = Ember.ArrayController.extend({
       });
 
       newQuestion.save();
-      this.transitionToRoute('questions');
+
       this.set('title', '');
       this.set('body', '');
+      this.transitionToRoute('questions');
     }
   }
 
