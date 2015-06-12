@@ -8,11 +8,15 @@ GNARledge was built by [Courtney Phillips](https://github.com/courtneymaepdx). C
 
 ## Motivation
 
-GNARledge was created as an exercise in Ember.js app creation, especially with forms, database associations, library dependencies, and aesthetically-pleasing styles. 
+GNARledge was created as an exercise in Ember.js app creation, especially with forms, database associations, library dependencies, and aesthetically-pleasing styles.
 
 ## Functionality
 
 GNARledge is a basic 'wilderness survival'-themed internet forum where users can post questions, and "experts" can peruse all available questions and post corresponding answers when applicable. Just like "Yahoo Answers", but hopefully a bit easier on the eyes.
+
+## Installation
+
+While GNARledge is a simple web application and doesn't need to be _formally_ 'installed', in order to view directly from the source code, you must navigate to the project folder in the terminal, and run `python -m SimpleHTTPServer` (case sensitive) to fire up the server and view.
 
 ## Contribute
 
