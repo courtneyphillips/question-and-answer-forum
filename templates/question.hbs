@@ -7,11 +7,11 @@
 
 <h2>Answers</h2>
 
-{{#each answer in answers itemController="answer"}}
+{{#each answer in answers}}
 
 <p>
   {{answer.text}}
-  <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+  <!-- <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button> -->
 </p>
 {{/each}}
 
