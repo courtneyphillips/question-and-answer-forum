@@ -20,3 +20,7 @@
 .btn-xs {
   align: right;
 }
+
+.well {
+  padding: 45px;
+}

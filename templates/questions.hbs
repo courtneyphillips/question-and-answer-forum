@@ -10,8 +10,8 @@
     </ul>
   {{else}}
     <div class="alert alert-info" role="alert">
-      <em>It looks like there aren't any questions yet! Why don't you add one:</em>
+      <em><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span>It looks like there aren't any questions yet! Why don't you add one:</em>
     </div>
   {{/if}}
-  {{#link-to 'new-question' classNames="btn btn-primary btn-block"}}New Question{{/link-to}}
+  {{#link-to 'new-question' classNames="btn btn-primary btn-block"}}<span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New Question{{/link-to}}
 </div>
