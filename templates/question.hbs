@@ -1,0 +1,18 @@
+<h2>{{title}}</h2>
+
+<p>{{body}}</p>
+
+{{outlet}}
+
+
+<h2>Answers</h2>
+
+{{#each answer in answers itemController="answer"}}
+
+<p>
+  {{answer.text}}
+  <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+</p>
+{{/each}}
+
+<p>{{#link-to 'new-answer' this class="btn btn-success"}}New answer{{/link-to}}</p>
