@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     width: 100%;
     height: 100%;
@@ -144,7 +138,7 @@ a:focus {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    /*padding: 100px 0;*/
     text-align: center;
     color: #fff;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
@@ -184,20 +178,6 @@ a:focus {
     }
 }
 
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 100%!important;
-    font-size: 40px;
-    color: #fff;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
 
 @-webkit-keyframes pulse {
     0% {
@@ -239,7 +219,7 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
+    /*padding: 50px 50px;*/
     color: #fff;
     background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
     background-color: #000;
@@ -250,13 +230,8 @@ a:focus {
 }
 
 
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
     .download-section {
-        padding: 100px 0;
+        padding: 20px;
     }
 
 

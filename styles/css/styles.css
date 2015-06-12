@@ -45,8 +45,16 @@ body {
 .answer {
   border-radius: 25px;
   border: 2px solid white;
-  padding: 20px;
+  padding: 10px;
   width: auto;
   height: auto;
   margin: 10px;
+}
+
+.question-page {
+  font-size: 120%;
+}
+
+.col-md-2 {
+  color: #B8B8B8;
 }

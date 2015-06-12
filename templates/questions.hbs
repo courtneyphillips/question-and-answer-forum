@@ -1,20 +1,23 @@
 <div class="container">
 
-  <h3 class="title">All Questions</h3>
+  <h2 class="title">All Questions</h2>
   <br>
+
   {{#if model}}
 
       {{#each question in model}}
       <div class="answer">
-        <h3>{{#link-to 'question' question}}{{question.title}}{{/link-to}}</h3>
-        <p class="text-right"> &mdash; {{question.author}}</p><br>
+        <h3 class="intro">{{#link-to 'question' question}}{{question.title}}{{/link-to}}</h3>
+        <p class="intro"> &mdash; {{question.author}}</p>
       </div>
       {{/each}}
-  {{else}}
-    <div class="alert alert-info" role="alert">
-      <em><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span>It looks like there aren't any questions yet! Why don't you add one:</em>
-    </div>
+
+    {{else}}
+      <div class="alert alert-info" role="alert">
+        <em><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span>It looks like there aren't any questions yet! Why don't you add one:</em>
+      </div>
   {{/if}}
+
   {{#link-to 'new-question' classNames="btn btn-default btn-block"}}<span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New Question{{/link-to}}
   <br><br><br>
 </div>
