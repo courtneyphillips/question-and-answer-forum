@@ -1,3 +1,4 @@
+<div class="container">
   <h1 class="title">New Question</h1><hr>
   <form>
     <div class="form-group">
@@ -12,5 +13,6 @@
       <label for="body"><span class="glyphicon glyphicon-comment" aria-hidden="true">&nbsp;Description</span></label>
       {{textarea value=description id="description" class="form-control" rows="6"}}
     </div>
-    <button class="btn btn-primary btn-block" {{action 'save'}}>Save</button>
+    <button class="btn btn-default btn-block" {{action 'save'}}>Save</button>
   </form>
+</div>

@@ -32,3 +32,21 @@
 .small {
   font-size: 80%;
 }
+
+body {
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.download {
+  margin-top: -100px;
+}
+
+.answer {
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  margin: 10px;
+}

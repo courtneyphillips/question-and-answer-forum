@@ -1,52 +1,72 @@
-<h1 class="title">{{title}}</h1>
-<hr>
+<div class="container">
+  <h1>{{title}}</h1>
+
 {{#if isEditing}}
-<h3><span class="glyphicon glyphicon-wrench" aria-hidden="true">&nbsp;Edit</span></h3><hr>
-<form>
-  <div class="form-group">
-    <label for="title"><span class="glyphicon glyphicon-question-sign" aria-hidden="true">&nbsp;Question</span></label>
-    {{input value=title id="title" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="author"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Author</span></label>
-    {{input value=author id="author" class="form-control"}}
-  </div>
-  <div class="form-group">
-    <label for="body"><span class="glyphicon glyphicon-comment" aria-hidden="true">&nbsp;Description</span></label>
-    {{textarea value=description id="description" class="form-control" rows="6"}}
-  </div>
-  <button class="btn btn-primary btn-block" {{action 'save'}}>Save</button>
-</form>
+
+    <h3><span class="glyphicon glyphicon-wrench" aria-hidden="true">&nbsp;Edit</span></h3><br>
+    <form>
+      <div class="form-group">
+        <label for="title"><span class="glyphicon glyphicon-question-sign" aria-hidden="true">&nbsp;Question</span></label>
+        {{input value=title id="title" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="author"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Author</span></label>
+        {{input value=author id="author" class="form-control"}}
+      </div>
+      <div class="form-group">
+        <label for="body"><span class="glyphicon glyphicon-comment" aria-hidden="true">&nbsp;Description</span></label>
+        {{textarea value=description id="description" class="form-control" rows="6"}}
+      </div>
+      <button class="btn btn-def btn-block" {{action 'save'}}>Save</button>
+    </form>
+
+
 {{else}}
-  <div class="well">
+
     <div class="row">
       <div class="col-md-2"><h4><b>Author</b>:</h4></div>
       <div class="col-md-9"><h4>{{author}}</h4></div>
     </div>
-    <hr>
+    <br>
     <div class="row">
       <div class="col-md-2"><h4><b>Description</b>:</h4></div>
       <div class="col-md-9"><h4>{{description}}</h4></div>
     </div>
-    <hr>
-  <button class="btn btn-warning" {{action 'edit'}}>Edit</button>
-  <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
-  </div>
+    <br>
+  <button class="btn btn-default btn-block" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-default btn-block" {{action 'delete'}}>Delete Question</button>
+
 {{/if}}
-{{outlet}}
-<br>
-<h2>Answers</h2>
-<hr>
-{{#if answers}}
-  {{#each answer in answers itemController="answer"}}
-    <div class="well">
-      <p>{{answer.text}}</p>
-      <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
-    </div>
-  {{/each}}
-{{else}}
-  <div class="alert alert-info" role="alert">
-    <p><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span> It looks like there aren't any answers to this question yet! Add one below.</p>
-  </div>
-{{/if}}
-<p>{{#link-to 'new-answer' this class="btn btn-success btn-block"}} <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New answer{{/link-to}}</p>
+
+<div class="container">
+  {{outlet}}
+</div>
+
+<section id="download" class="content-section text-center">
+  <div class="download-section">
+    <!-- <div class="content"> -->
+      <!-- <div class="col-lg-8 col-lg-offset-2"> -->
+        <h2>Answers</h2>
+        <br>
+        {{#if answers}}
+          {{#each answer in answers itemController="answer"}}
+          <!-- <div class="well"> -->
+          <p>{{answer.text}}<br>
+          <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button></p>
+          <!-- </div> -->
+          {{/each}}
+
+        {{else}}
+        <div class="alert alert-info" role="alert">
+          <p><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span> It looks like there aren't any answers to this question yet! Add one below.</p>
+        </div>
+        {{/if}}
+
+        <br><br>
+        {{#link-to 'new-answer' this class="btn btn-default btn-block"}} <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New answer{{/link-to}}
+      <!-- </div> -->
+      </div>
+
+
+</section>
+</div>
