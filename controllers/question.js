@@ -4,14 +4,14 @@ Forum.QuestionController = Ember.ObjectController.extend({
     edit: function() {
       this.set('isEditing', true);
     },
-    save: function() {
-      this.set('isEditing', false);
-    }.property('title'),
     delete: function() {
       if (confirm('Are you sure?')) {
         this.get('model').destroyRecord();
-        this.transitionToRoute('questions');
+        this.transitionToRoute('questions')
       }
-    }
+    },
+      save: function() {
+        this.set('isEditing', false);
+      }
   }
 });

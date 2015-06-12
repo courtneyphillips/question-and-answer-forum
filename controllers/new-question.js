@@ -4,11 +4,11 @@ Forum.NewQuestionController = Ember.Controller.extend({
       var newQuestion = this.store.createRecord('question', {
         title: this.get('title'),
         author: this.get('author'),
-        body: this.get('body')
+        description: this.get('description')
       });
       newQuestion.save();
       this.set('title', '');
-      this.set('body', '');
+      this.set('description', '');
       this.set('author', '')
       this.transitionToRoute('questions');
     }

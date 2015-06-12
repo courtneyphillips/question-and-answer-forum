@@ -1,16 +1,17 @@
 <h3 class="title">All Questions</h3>
-
+<hr>
 <div class="questions-list">
-
   {{#if model}}
-    <ul><hr>
+    <ul>
       {{#each question in model}}
-      <li>{{question.author}}   -   {{#link-to 'question' question}}{{question.title}}{{/link-to}}</li><hr>
+      <li><h4>{{#link-to 'question' question}}{{question.title}}{{/link-to}}</h4>
+      <p class="text-right"> &mdash; {{question.author}}</p></li><hr>
       {{/each}}
     </ul>
   {{else}}
-    <h4><em>It looks like there aren't any questions yet! Why don't you add one:</em></h4>
+    <div class="alert alert-info" role="alert">
+      <em>It looks like there aren't any questions yet! Why don't you add one:</em>
+    </div>
   {{/if}}
   {{#link-to 'new-question' classNames="btn btn-primary btn-block"}}New Question{{/link-to}}
-
 </div>

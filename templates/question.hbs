@@ -12,8 +12,8 @@
       {{input value=author id="author" class="form-control"}}
     </div>
     <div class="form-group">
-      <label for="body">Body</label>
-      {{textarea value=body id="body" class="form-control" rows="15"}}
+      <label for="description">Body</label>
+      {{textarea value=description id="description" class="form-control" rows="15"}}
     </div>
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
@@ -26,11 +26,11 @@
     </div>
     <hr>
     <div class="row">
-      <div class="col-md-2"><b>Additional Info</b>:</div>
-      <div class="col-md-9">{{body}}</div>
+      <div class="col-md-2"><b>Description</b>:</div>
+      <div class="col-md-9">{{description}}</div>
     </div>
     <hr>
-  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-warning" {{action 'edit'}}>Edit</button>
   <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
   </div>
 {{/if}}
@@ -43,21 +43,16 @@
 <hr>
 
 {{#if answers}}
-
-
   {{#each answer in answers itemController="answer"}}
     <div class="well">
       <p>{{answer.text}}</p>
       <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
     </div>
   {{/each}}
-
-
 {{else}}
-  <div class="empty-message">
+
+  <div class="alert alert-info" role="alert">
     <p>It looks like there aren't any answers to this question yet! Add one below.</p>
   </div>
-
 {{/if}}
-
 <p>{{#link-to 'new-answer' this class="btn btn-success btn-block"}}New answer{{/link-to}}</p>
