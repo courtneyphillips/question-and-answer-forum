@@ -1,5 +1,5 @@
-Forum.AnswersRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.find('answer');
-  }
-});
+// Forum.AnswersRoute = Ember.Route.extend({
+//   model: function() {
+//     return this.store.find('answer');
+//   }
+// });

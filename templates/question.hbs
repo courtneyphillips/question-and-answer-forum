@@ -24,7 +24,7 @@
 
 <h2>Answers</h2>
 
-{{#each answer in answers}}
+{{#each answer in answers itemController="answer"}}
   <p>
     {{answer.text}}
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
