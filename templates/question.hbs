@@ -17,17 +17,16 @@
   </div>
   <button class="btn btn-primary btn-block" {{action 'save'}}>Save</button>
 </form>
-
 {{else}}
   <div class="well">
     <div class="row">
-      <div class="col-md-2"><b>Author</b>:</div>
-      <div class="col-md-9">{{author}}</div>
+      <div class="col-md-2"><h4><b>Author</b>:</h4></div>
+      <div class="col-md-9"><h4>{{author}}</h4></div>
     </div>
     <hr>
     <div class="row">
-      <div class="col-md-2"><b>Description</b>:</div>
-      <div class="col-md-9">{{description}}</div>
+      <div class="col-md-2"><h4><b>Description</b>:</h4></div>
+      <div class="col-md-9"><h4>{{description}}</h4></div>
     </div>
     <hr>
   <button class="btn btn-warning" {{action 'edit'}}>Edit</button>

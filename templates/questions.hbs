@@ -1,6 +1,29 @@
-<h3 class="title">All Questions</h3>
+<section id="about" class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h2>All Questions</h2>
+      {{#if model}}
+      <ul>
+        {{#each question in model}}
+        <li><h4>{{#link-to 'question' question}}{{question.title}}{{/link-to}}</h4>
+          <p class="text-right"> &mdash; {{question.author}}</p></li><hr>
+          {{/each}}
+        </ul>
+        {{else}}
+        <div class="alert alert-info" role="alert">
+          <em><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span>It looks like there aren't any questions yet! Why don't you add one:</em>
+        </div>
+        {{/if}}
+        {{#link-to 'new-question' classNames="btn btn-primary btn-block"}}<span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New Question{{/link-to}}
+      </div>
+  </div>
+</section>
+
+
+
+<!-- <h3 class="title">All Questions</h3>
 <hr>
-<div class="questions-list">
+<div class="questions-list about">
   {{#if model}}
     <ul>
       {{#each question in model}}
@@ -14,4 +37,4 @@
     </div>
   {{/if}}
   {{#link-to 'new-question' classNames="btn btn-primary btn-block"}}<span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New Question{{/link-to}}
-</div>
+</div> -->

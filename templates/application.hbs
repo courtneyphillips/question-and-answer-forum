@@ -1,16 +1,30 @@
-<div class='container'>
-  <div class="jumbotron">
-    <h1>Question and Answer Forum</h1>
-  </div>
-  <nav class='navbar navbar-default'>
-    <div class="container-fluid">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
     <ul class="nav navbar-nav">
-      <li>{{#link-to 'questions'}}Questions{{/link-to}}</li>
-      <li>{{#link-to 'new-question'}}New Question{{/link-to}}</li>
-      <li><a href="#">About</a></li>
+      <li>
+        {{#link-to 'questions'}}Questions{{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'new-question'}}New Question{{/link-to}}
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
     </ul>
   </div>
-  </nav>
+</nav>
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="brand-heading"><em>gnarl</em>EDGE</h1>
+          <p class="intro-text">Your one-stop-shop for expert knowledge and Q&amp;A from the leading experts on wilderness survival and nature.</p></div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container-fluid">
   <div class="container">
     {{outlet}}
   </div>
