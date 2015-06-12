@@ -7,6 +7,9 @@ Forum.NewQuestionController = Ember.Controller.extend({
         body: this.get('body')
       });
       newQuestion.save();
+      this.set('title', '');
+      this.set('body', '');
+      this.set('author', '')
       this.transitionToRoute('questions');
     }
   }
