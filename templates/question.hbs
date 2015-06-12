@@ -1,10 +1,14 @@
-<h1>{{title}}</h1>
+<h1 class="title">{{title}}</h1>
 
 {{#if isEditing}}
   <form>
     <div class="form-group">
       <label for="title">Title</label>
       {{input value=title id="title" class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="author">Author Name</label>
+      {{input value=author id="author" class="form-control"}}
     </div>
     <div class="form-group">
       <label for="body">Body</label>
@@ -14,9 +18,12 @@
   </form>
 
 {{else}}
-  <p>{{body}}</p>
-  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
-  <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
+  <div class="question-details">
+    <p><b>Author</b>:  {{author}}</p>
+    <p><b>Additional Info</b>:   {{body}}</p>
+    <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+    <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
+  </div>
 {{/if}}
 
 
@@ -27,13 +34,19 @@
 
 {{#if answers}}
 
+<div class="answer-list">
   {{#each answer in answers itemController="answer"}}
-  <p>{{answer.text}}</p>
-  <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+  <div class="answer">
+    <p>{{answer.text}}
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button></p>
+  </div>
   {{/each}}
+</div>
 
 {{else}}
-  <p>It looks like there aren't any answers to this question yet! Add one below.</p>
+  <div class="empty-message">
+    <p>It looks like there aren't any answers to this question yet! Add one below.</p>
+  </div>
 
 {{/if}}
 

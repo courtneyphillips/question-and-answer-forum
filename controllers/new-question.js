@@ -3,6 +3,7 @@ Forum.NewQuestionController = Ember.Controller.extend({
     save: function() {
       var newQuestion = this.store.createRecord('question', {
         title: this.get('title'),
+        author: this.get('author'),
         body: this.get('body')
       });
       newQuestion.save();

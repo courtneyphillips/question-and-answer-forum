@@ -4,6 +4,7 @@ Forum.QuestionsController = Ember.ArrayController.extend({
     save: function() {
       var newQuestion = this.store.createRecord('question', {
         title: this.get('title'),
+        author: this.get('author'),
         body: this.get('body')
       });
 
@@ -11,6 +12,7 @@ Forum.QuestionsController = Ember.ArrayController.extend({
 
       this.set('title', '');
       this.set('body', '');
+      this.set('author', '')
       this.transitionToRoute('questions');
     }
   }
