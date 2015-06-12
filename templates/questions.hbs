@@ -1,10 +1,16 @@
 <h3>All Questions</h3>
 
-<ul>
-  <li>test</li>
-  {{#each question in model}}
-  <li>{{#link-to 'question' question}}{{question.title}}{{/link-to}}</li>
-  {{/each}}
-</ul>
+<div class="questions">
 
-{{#link-to 'new-question' classNames="btn btn-primary btn-block"}}New Question{{/link-to}}
+  {{#if model}}
+    <ul>
+      {{#each question in model}}
+      <li>{{#link-to 'question' question}}{{question.title}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <h4><em>It looks like there aren't any questions yet! Why don't you add one:</em></h4>
+  {{/if}}
+  {{#link-to 'new-question' classNames="btn btn-primary btn-block"}}New Question{{/link-to}}
+  
+</div>
