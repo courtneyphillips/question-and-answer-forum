@@ -6,13 +6,17 @@
   margin-bottom: -5px;
 }
 
-form {
+/*form {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
-}
+}*/
 
 .questions-list {
   margin-right: 30px;
   margin-left: auto;
+}
+
+.btn-xs {
+  align: right;
 }

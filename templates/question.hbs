@@ -52,7 +52,7 @@
 {{else}}
 
   <div class="alert alert-info" role="alert">
-    <p>It looks like there aren't any answers to this question yet! Add one below.</p>
+    <p><span class="glyphicon glyphicon-alert" aria-hidden="true">&nbsp;</span> It looks like there aren't any answers to this question yet! Add one below.</p>
   </div>
 {{/if}}
-<p>{{#link-to 'new-answer' this class="btn btn-success btn-block"}}New answer{{/link-to}}</p>
+<p>{{#link-to 'new-answer' this class="btn btn-success btn-block"}} <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;</span>New answer{{/link-to}}</p>
