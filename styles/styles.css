@@ -1,0 +1,7 @@
+.nav li {
+  float: left; list-style-type: none;
+}
+
+.jumbotron {
+  margin-bottom: -5px;
+}
