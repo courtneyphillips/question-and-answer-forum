@@ -17,19 +17,20 @@
   <p>{{body}}</p>
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
   <button class="btn btn-danger" {{action 'delete'}}>Delete Question</button>
-
 {{/if}}
+
 
 
 {{outlet}}
 
+
+
 <h2>Answers</h2>
 
 {{#each answer in answers itemController="answer"}}
-  <p>
-    {{answer.text}}
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
-  </p>
+  <p>{{answer.text}}</p>
+  <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+
 {{/each}}
 
-<p>{{#link-to 'new-answer' this class="btn btn-success btn-block"}}New answer{{/link-to}}</p>
+<p>{{#link-to 'new-answer' this class="btn btn-success"}}New answer{{/link-to}}</p>
