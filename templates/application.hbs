@@ -6,10 +6,12 @@
     <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li>{{#link-to 'questions'}}Questions{{/link-to}}</li>
-      <li><a href="#">Profile</a></li>
+      <li>{{#link-to 'new-question'}}New Question{{/link-to}}</li>
       <li><a href="#">Messages</a></li>
     </ul>
   </div>
   </nav>
-  {{outlet}}
+  <div class="container-fluid">
+    {{outlet}}
+  </div>
 </div>
